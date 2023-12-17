@@ -1,0 +1,36 @@
+AISHA Responses : write a program in python to transcribe an audio using voice assistant 
+ *************************
+
+
+
+import speech_recognition as sr
+ 
+# Initialize the recognizer 
+r = sr.Recognizer() 
+ 
+# Function to transcribe audio 
+def transcribe_audio(audio): 
+	  
+	# Exception handling to handle 
+	# exceptions at the runtime 
+	try: 
+		
+		# use the recognizer to recognize the audio 
+		text = r.recognize_google(audio) 
+		print("The audio file contains: " + text) 
+	  
+	except sr.UnknownValueError: 
+		print("Google Speech Recognition could not understand audio") 
+	  
+	except sr.RequestError as e: 
+		print("Could not request results from Google Speech Recognition service; {0}".format(e)) 
+	  
+	return text 
+		
+if __name__ == '__main__': 
+	
+	# Path to the audio file to be analyzed 
+	path = 'audio.wav'
+	  
+	# Use the audio file as the audio source 
+	with sr.AudioFile(path

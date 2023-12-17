@@ -1,0 +1,15 @@
+AISHA Responses : in python make a program to add two strings 
+ *************************
+
+
+
+# Program to add two strings
+
+str1 = input("Enter the first string: ")
+str2 = input("Enter the second string: ")
+
+# concatenate two strings
+str3 = str1 + str2
+
+# print result
+print("Concatenated string: ", str3)

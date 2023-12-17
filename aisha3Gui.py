@@ -71,7 +71,7 @@ def cleanup():
 def chat(query):
     global chatStr
     print(chatStr)
-    openai.api_key = "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"
+    openai.api_key = "############################"
     chatStr += f"Yash: {query}\n AISHA: "
     response = openai.Completion.create(
         model="text-davinci-003",
@@ -88,7 +88,7 @@ def chat(query):
     return response["choices"][0]["text"]
 
 def aiImg(prompt):
-    openai.api_key = "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"
+    openai.api_key = "############################"
     text = f"AISHA Responses : {prompt} \n *************************\n\n"
     
     response = openai.Image.create(
@@ -107,7 +107,7 @@ def aiImg(prompt):
     print("Image saved")
 
 def ai(prompt):
-    openai.api_key = "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"
+    openai.api_key = "############################"
     text = f"AISHA Responses : {prompt} \n *************************\n\n"
     
     response = openai.Completion.create(
@@ -129,7 +129,7 @@ def ai(prompt):
         
         
 def aiProgram(prompt):
-    openai.api_key = "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"
+    openai.api_key = "############################"
     text = f"AISHA Responses : {prompt} \n *************************\n\n"
 
     response = openai.Completion.create(
@@ -244,8 +244,8 @@ class MainThread(QThread):
         server = smtplib.SMTP("smtp.gmial.com", 587)
         server.ehlo()
         server.starttls()
-        server.login("coolboyjack437@gmail.com", "ys@212004")
-        server.sendmail("coolboyjack437@gmail.com", to, content)
+        server.login("test@gmail.com", "test@123")
+        server.sendmail("test@gmail.com", to, content)
         server.close()
 
     def takeCommand(self):
